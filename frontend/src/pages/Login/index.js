@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './styles.css';
+
+import Api from '../../services/api.js';
 
 import { Button } from 'react-bootstrap';
 import backImage from '../../assets/login_comp.png';
@@ -18,14 +20,21 @@ var bodyStyle = {
   
 
 function Login(){
-console.log(boxImage);
+
+    const [isWrong, setIsWrong] = useState(false);
+
+
+    function handleLogin(e){
+        e.preventDefault();
+    }
+
 
     return(
         <div className="container" >
             <div className="background"style={bodyStyle}>
 
                 <div className="formulario">
-                    <form action="" className="form-container">
+                    <form action="" className="form-container" onSubmit={handleLogin}>
                         <div className="campo">
                             <div className="linha-texto">Batalhão</div>
                             <input type="text" placeholder="Nome do Batalhão"  />                            
@@ -39,9 +48,7 @@ console.log(boxImage);
                         <button type="submit" class="btn-circle btn-login">Entrar</button>                    
                         
                     </form>
-                </div>
-
-               
+                </div>               
             </div>
            
         </div>

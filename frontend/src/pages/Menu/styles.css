@@ -1,0 +1,35 @@
+.container{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1;
+    background-color: #333333;
+}
+
+.box-menu{
+    background-image: url( '../../assets/menu_box.png');
+   
+    height: 750px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 5%;
+}
+
+.btn-bar{
+    position: relative;
+    left: 224px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.btn-mounth{
+   /* background-color: blueviolet;*/
+    opacity: 0.5;
+    width: 106px;
+    height: 75px;
+}
