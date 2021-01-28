@@ -5,7 +5,8 @@ const { listenerCount } = require('../database/connection');
 module.exports = {
 
     async login(request, response){
-        console.log("Tentar logar");
+        console.log("Tentar logar"); 
+        console.log(request);
         const {name,password} = request.body;
         const time = await connection('teams').select('*').where('name',name ).where('password', password);
         

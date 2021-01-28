@@ -1,31 +1,29 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './styles.css';
 import {Link} from 'react-router-dom';
 import boxImage from '../../assets/menu_box.png';
+import MenuBar from './menu-bar';
 
 function Menu() {
 
-    function clickMouth(mouth){
-        console.log(mouth);
-    }
+    
    
     return(
 
         <div className="container" >
-            <div className="box-menu">
-                <div className="btn-bar">
-                    <Link className="btn-mounth" to='/Mission/1' /> 
-                    <Link className="btn-mounth" to='/Mission/2' /> 
-                    <Link className="btn-mounth" to='/Mission/3' /> 
-                    <Link className="btn-mounth" to='/Mission/4' />  
-                    <Link className="btn-mounth" to='/Mission/5' /> 
-                    <Link className="btn-mounth" to='/Mission/6' /> 
-                    <Link className="btn-mounth" to='/Mission/7' /> 
-                    <Link className="btn-mounth" to='/Mission/8' /> 
-                    <Link className="btn-mounth" to='/Mission/9' /> 
-                    <Link className="btn-mounth" to='/Mission/10' /> 
-                    <Link className="btn-mounth" to='/Mission/11' /> 
-                    <Link className="btn-mounth" to='/Mission/12' /> 
+            <div className="box-menu"  >
+                <MenuBar />
+                <div className="body">
+                    <div className="user-info">
+                        <div className="user-info-left">
+                            <img src="" alt="" className="brasao"/>
+                        </div>
+                        <div className="user-info-right">
+                            <div className="info-team"></div>
+                            <div className="info-capitan"></div>
+                            <div className="info-score"></div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
